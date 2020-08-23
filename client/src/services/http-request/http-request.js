@@ -5,7 +5,6 @@ export const httpRequest = async (url, method = 'GET', body = null, headers = {}
       headers['Content-Type'] = 'application/json';
     }
     const response = await fetch(url, { method, body, headers });
-    console.log(response);
     const data = await response.json();
 
     if (!response.ok) {
